@@ -1,0 +1,14 @@
+import os
+
+FLASK_DEBUG = True
+
+SUPERSET_WEBSERVER_PORT = 8088
+SQLALCHEMY_DATABASE_URI = os.getenv('SQLALCHEMY_DATABASE_URI')
+
+# Superset specific config
+ROW_LIMIT = 5000
+WEBSERVER_THREADS = 8
+
+SECRET_KEY = os.environ.get('SECRET_KEY') or 'my_secret_key'
+
+CSRF_ENABLED = True
